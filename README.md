@@ -45,3 +45,49 @@ This approach **gradually expands the labeled dataset**, leading to **better mod
 
 ---
 
+## Prac 3: **Dimensionality Reduction & Feature Selection in Machine Learning**  
+
+## **📌 Introduction**  
+Dimensionality reduction is a crucial technique in machine learning used to reduce the number of input variables (features) in a dataset while preserving important information. It helps in improving model performance, reducing computation time, and avoiding overfitting.
+
+In this project, we perform **dimensionality reduction** using **feature selection** and **feature extraction** techniques and train models to evaluate their effectiveness.
+
+---
+
+## **🧩 The Curse of Dimensionality**  
+The **Curse of Dimensionality** refers to the challenges that arise when working with high-dimensional data. Some of the major issues include:  
+
+- **Increased computation time:** Training models on high-dimensional data is computationally expensive.  
+- **Overfitting:** Models may learn noise instead of patterns due to too many features.  
+- **Data sparsity:** In high dimensions, data points become sparse, making distance-based models ineffective.  
+
+### **🛠️ Solution: Dimensionality Reduction**  
+To combat the curse of dimensionality, we can apply **dimensionality reduction techniques** like:  
+
+✅ **Feature Selection:** Selecting the most important features that contribute to the target variable.  
+✅ **Feature Extraction:** Transforming data into a lower-dimensional space while preserving meaningful information.  
+
+---
+
+## **🔬 Feature Selection Methods**
+Feature selection helps in reducing irrelevant or redundant features while maintaining the predictive power of the dataset.  
+This project uses the following techniques:  
+
+1️⃣ **Variance Threshold:** Removes features with low variance (almost constant features).  
+2️⃣ **SelectKBest (ANOVA F-score):** Selects top features based on their statistical importance.  
+
+### **📌 Feature Selection Solutions**
+✔ **Remove redundant features:** Use correlation heatmaps to detect highly correlated features.  
+✔ **Use domain knowledge:** Identify the most relevant features.  
+✔ **Apply automated feature selection methods:** Such as SelectKBest, Recursive Feature Elimination (RFE), and LASSO regression.  
+
+---
+
+## **🎭 Feature Extraction (Dimensionality Reduction Using PCA)**
+Feature extraction transforms high-dimensional data into a lower-dimensional space. This project implements:  
+
+📌 **Principal Component Analysis (PCA)**:  
+- Reduces dimensionality by projecting data into a new feature space while retaining maximum variance.  
+- Helps in visualizing and improving model efficiency.  
+
+---
