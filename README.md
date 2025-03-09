@@ -210,3 +210,57 @@ Silhouette Score helps validate the chosen **K** by checking cluster separation.
 
 ---
 
+# Prac 6: Hierarchical Clustering: A Comprehensive Guide  
+
+#### 📌 What is Hierarchical Clustering?  
+Hierarchical clustering is an unsupervised machine learning algorithm used to group data points into clusters based on their similarity. Unlike K-Means, it does not require the number of clusters to be predefined and creates a hierarchy of clusters in a tree-like structure called a **dendrogram**.  
+
+---
+
+#### 🔍 Why Use Hierarchical Clustering?  
+1. **No need to predefine clusters** 🧐 – Unlike K-Means, it doesn't require specifying `k` beforehand.  
+2. **Dendrogram analysis** 📊 – Provides a visual representation of how clusters are formed.  
+3. **Interpretable clustering** ✅ – Good for understanding relationships in data.  
+4. **Works well with small datasets** 📉 – Computationally expensive for large datasets but effective for smaller ones.  
+
+---
+
+#### ⚙️ Workflow of Hierarchical Clustering  
+1. **Compute pairwise distances** between data points.  
+2. **Create a linkage matrix** to measure distances between clusters.  
+3. **Build a dendrogram** that visually represents merging clusters.  
+4. **Determine the optimal number of clusters** by cutting the dendrogram at an appropriate level.  
+5. **Assign cluster labels** to the dataset.  
+
+---
+
+#### 🔗 Types of Linkage in Hierarchical Clustering  
+Linkage defines how distances between clusters are calculated.  
+
+1. **Single Linkage (Minimum Linkage)** – Distance between the closest points in two clusters.  
+2. **Complete Linkage (Maximum Linkage)** – Distance between the farthest points in two clusters.  
+3. **Average Linkage** – Average of all pairwise distances between points in two clusters.  
+4. **Centroid Linkage** – Distance between centroids of clusters.  
+5. **Ward's Linkage** – Minimizes variance within clusters (default in `scikit-learn`).  
+
+---
+
+#### 📊 Dendrogram and Cluster Selection  
+- The **dendrogram** is a tree-like structure that shows how clusters are merged.  
+- To determine the optimal number of clusters, look for the **longest vertical line** that can be cut without crossing horizontal merges.  
+
+---
+
+#### 📈 Next Steps After Clustering  
+- **Evaluate cluster quality** using metrics like **Silhouette Score**.  
+- **Compare with K-Means clustering** for performance insights.  
+- **Visualize in 3D** if more than two features are present.  
+- **Apply feature scaling (StandardScaler/MinMaxScaler)** to improve accuracy.  
+- **Use domain knowledge** to interpret cluster characteristics.  
+
+---
+
+### 🚀 Conclusion  
+Hierarchical clustering is a powerful technique for grouping data based on similarity without predefining clusters. Its dendrogram representation helps in understanding data structure, but its high computational cost makes it less suitable for large datasets.  
+
+
