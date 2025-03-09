@@ -263,4 +263,52 @@ Linkage defines how distances between clusters are calculated.
 ### 🚀 Conclusion  
 Hierarchical clustering is a powerful technique for grouping data based on similarity without predefining clusters. Its dendrogram representation helps in understanding data structure, but its high computational cost makes it less suitable for large datasets.  
 
+---
 
+# Prac 7: **🌀 DBSCAN (Density-Based Spatial Clustering)**
+DBSCAN is an **unsupervised** clustering algorithm that groups nearby points while identifying **outliers** as noise. Unlike **K-Means** or **Hierarchical Clustering**, DBSCAN **does not require** specifying the number of clusters beforehand and is **robust to outliers**. 🚀  
+
+---
+
+## **🔍 How DBSCAN Works**
+DBSCAN groups points based on two key parameters:  
+1. **🔹 eps (ε)** – The maximum distance between two points to be considered neighbors.  
+2. **🔹 min_samples** – The minimum number of points required in a neighborhood to form a **dense region (cluster).**  
+
+### **📌 Steps of DBSCAN**
+1️⃣ **Select a random unvisited point** and check its neighborhood using **eps**.  
+2️⃣ If the number of neighbors **≥ min_samples**, a **new cluster** is formed.  
+3️⃣ Expand the cluster by recursively adding **density-reachable points**.  
+4️⃣ If a point has fewer than **min_samples** neighbors, it is labeled as **noise**. ❌  
+5️⃣ Repeat until all points are visited. ✅  
+
+---
+
+## **💡 Benefits of DBSCAN**
+✅ **No need to specify the number of clusters** – Unlike K-Means, which requires a predefined `k`.  
+✅ **Handles outliers well** – Unlike K-Means and Hierarchical Clustering, DBSCAN can mark noise points. 🏝️  
+✅ **Works with arbitrary-shaped clusters** – Can identify **non-spherical** clusters, unlike K-Means which assumes spherical clusters. 🔄  
+✅ **Robust to varying densities** – Can handle clusters of **different densities**. 📊  
+
+---
+
+## **⚖️ Comparison with Other Clustering Algorithms**
+| Feature          | 🔹 K-Means               | 🔹 Hierarchical Clustering | 🔹 DBSCAN |
+|-----------------|----------------------|-------------------------|--------|
+| **Clusters shape** | 🔵 Spherical            | 🌲 Tree-based               | 🔄 Arbitrary |
+| **Handles outliers?** | ❌ No               | ❌ No                     | ✅ Yes |
+| **Number of clusters?** | Must be specified | Must be specified        | 📌 Found automatically |
+| **Scalability** | ⚡ Fast | 🐢 Slow | ⚡ Fast (for medium datasets) |
+
+---
+
+## **🛠️ When to Use DBSCAN?**
+📌 When you **don’t know the number of clusters** in advance.  
+📌 When data has **arbitrary-shaped clusters** (not just circular).  
+📌 When handling **outliers/noise** is important. 🚧  
+📌 When dealing with **density-based clustering problems**.  
+
+---
+
+## **🚀 Conclusion**
+DBSCAN is a **powerful** clustering algorithm that excels in detecting clusters of **arbitrary shapes** while identifying **noise**. It is particularly useful when the number of clusters is **unknown** and when dealing with datasets containing **outliers**.  
