@@ -154,4 +154,59 @@ Eigenvalues and eigenvectors help in transforming data into new principal compon
 - **Covariance Matrix**: Measures feature relationships.  
 - **Eigenvalues**: Show how much variance a principal component captures.  
 - **Eigenvectors**: Define the new directions (principal components) in transformed space.  
+---
+
+# Prac 5: **📌 K-Means Clustering:**
+
+### **1️⃣ What is K-Means?**
+K-Means is an **unsupervised machine learning algorithm** used for **clustering data** into **K groups** based on feature similarity. It aims to minimize the distance between data points and their assigned cluster centers (centroids).  
+
+### **2️⃣ How K-Means Works? (Workflow)**
+The algorithm follows these steps:
+
+1️⃣ **Choose the number of clusters (K)**.  
+2️⃣ **Randomly initialize K centroids** (initial cluster centers).  
+3️⃣ **Assign each data point to the nearest centroid** (based on Euclidean distance).  
+4️⃣ **Recompute centroids** by taking the mean of all points in each cluster.  
+5️⃣ **Repeat steps 3-4 until centroids remain stable** (i.e., no major changes in cluster assignments).  
+
+**📌 Final Output:** Data points are grouped into K clusters.  
+
+---
+
+## **📊 Choosing the Right Number of Clusters (K)**
+Choosing the optimal number of clusters is crucial in K-Means. Two key methods for this are:  
+
+### **1️⃣ Elbow Method**
+The **Elbow Method** helps determine the best K by plotting the **Within-Cluster Sum of Squares (WCSS)** for different K values and identifying the "elbow point" where adding more clusters **does not significantly decrease WCSS**.
+
+#### **🔹 Within-Cluster Sum of Squares (WCSS)**
+WCSS measures how compact the clusters are by calculating the sum of squared distances between each data point and its centroid.  
+📌 **Formula:**  
+
+![image](https://github.com/user-attachments/assets/99c377ee-66d8-43b6-abfc-19f7c283b946)
+
+
+- **Lower WCSS = Better clustering**  
+
+#### **📌 Elbow Method Steps**
+1. Compute WCSS for different values of K (e.g., 1 to 10).
+2. Plot K vs. WCSS.
+3. Find the "elbow point" (where WCSS stops decreasing significantly).
+4. Choose K at this elbow.
+
+---
+
+### **2️⃣ Silhouette Score**
+The **Silhouette Score** measures **how well-separated** the clusters are. It evaluates each point by comparing:
+- **Intra-cluster distance (a)** → Distance to points in the same cluster.  
+- **Inter-cluster distance (b)** → Distance to the nearest cluster.  
+
+📌 **Formula:**  
+![image](https://github.com/user-attachments/assets/40d3ff50-3615-46b8-a934-8ad54b94ccc5)
+
+
+Silhouette Score helps validate the chosen **K** by checking cluster separation.
+
+---
 
