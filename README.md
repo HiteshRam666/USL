@@ -92,7 +92,7 @@ Feature extraction transforms high-dimensional data into a lower-dimensional spa
 
 ---
 
-# Prac 4: Principal Component Analysis (PCA) from Scratch using NumPy  
+# Prac 4: Principal Component Analysis (PCA) 
 
 ## 📌 What is PCA?  
 Principal Component Analysis (PCA) is a dimensionality reduction technique used in machine learning and statistics. It transforms high-dimensional data into a lower-dimensional form while preserving as much variance as possible.  
