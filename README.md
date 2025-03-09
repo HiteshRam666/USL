@@ -312,3 +312,104 @@ DBSCAN groups points based on two key parameters:
 
 ## **🚀 Conclusion**
 DBSCAN is a **powerful** clustering algorithm that excels in detecting clusters of **arbitrary shapes** while identifying **noise**. It is particularly useful when the number of clusters is **unknown** and when dealing with datasets containing **outliers**.  
+
+# Prac 8 & 9 **Apriori, Association Rules, FP-Growth & Market Basket Analysis**  
+
+#### **1. Market Basket Analysis (MBA)**
+Market Basket Analysis is a technique used in data mining to discover relationships between products that are frequently purchased together. It helps businesses:  
+- Recommend relevant products (e.g., Amazon, Flipkart).  
+- Optimize store layouts.  
+- Improve cross-selling strategies (e.g., “Customers who bought this also bought…”).  
+
+Example:  
+If many people buy **bread and butter together**, a retailer might bundle them or place them close in the store.
+
+---
+
+#### **2. Association Rule Mining**
+Association Rule Mining is a method used in Market Basket Analysis to find relationships between different items in transactions.  
+
+A rule is written as:  
+👉 **X → Y**  
+(_If item X is bought, item Y is likely to be bought too._)
+
+##### **Key Metrics:**
+1. **Support:** How frequently an itemset appears in transactions.  
+   _Formula:_  
+   \[
+   Support(X) = \frac{\text{Transactions containing } X}{\text{Total transactions}}
+   \]
+  
+2. **Confidence:** The likelihood of item Y being bought if item X is bought.  
+   _Formula:_  
+   \[
+   Confidence(X \to Y) = \frac{\text{Support}(X, Y)}{\text{Support}(X)}
+   \]
+
+3. **Lift:** Measures how much more likely Y is bought when X is bought, compared to random chances.  
+   _Formula:_  
+   \[
+   Lift(X \to Y) = \frac{\text{Confidence}(X \to Y)}{\text{Support}(Y)}
+   \]
+
+##### **Example:**
+| Transaction | Items Bought        |
+|------------|--------------------|
+| 1          | Bread, Butter, Milk |
+| 2          | Bread, Butter       |
+| 3          | Bread, Milk         |
+| 4          | Butter, Milk        |
+
+- Rule: **Bread → Butter (Confidence: 66%)**  
+  _"66% of customers who buy Bread also buy Butter."_
+
+---
+
+#### **3. Apriori Algorithm**
+**Apriori** is a basic algorithm for association rule mining. It finds **frequent itemsets** based on a minimum support threshold and then generates rules.
+
+##### **How It Works:**
+1. **Set a minimum support threshold** (e.g., 40%).  
+2. **Find frequent itemsets** that meet the support threshold.  
+3. **Generate association rules** from frequent itemsets.  
+4. **Filter rules** based on confidence and lift.
+
+##### **Pros & Cons:**
+✔ Simple to understand.  
+✔ Useful for small datasets.  
+✖ Slow for large datasets (scans the database multiple times).  
+
+---
+
+#### **4. FP-Growth Algorithm**
+**FP-Growth (Frequent Pattern Growth)** is an advanced algorithm that overcomes Apriori’s inefficiency by reducing database scans.
+
+##### **How It Works:**
+1. **Build an FP-Tree** (compact representation of transactions).  
+2. **Extract frequent itemsets without scanning the database multiple times.**  
+3. **Generate association rules from the frequent patterns.**
+
+##### **Pros & Cons:**
+✔ Faster than Apriori.  
+✔ Works well for large datasets.  
+✖ More complex and requires additional memory.  
+
+---
+
+#### **5. Comparison: Apriori vs. FP-Growth**
+| Feature         | Apriori            | FP-Growth         |
+|----------------|--------------------|-------------------|
+| Method         | Generates candidate itemsets | Builds FP-tree |
+| Speed         | Slow for large datasets | Faster |
+| Memory Usage | High | Moderate |
+| Best For | Small/medium datasets | Large datasets |
+
+---
+
+### **Conclusion**
+- **Market Basket Analysis** helps businesses understand customer behavior.  
+- **Association Rule Mining** identifies relationships between frequently bought items.  
+- **Apriori Algorithm** is simple but inefficient for large datasets.  
+- **FP-Growth Algorithm** is much faster and more scalable.  
+
+Businesses use these techniques for **product recommendations, shelf arrangements, and promotions.** 🚀
