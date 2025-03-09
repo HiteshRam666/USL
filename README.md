@@ -413,3 +413,22 @@ A rule is written as:
 - **FP-Growth Algorithm** is much faster and more scalable.  
 
 Businesses use these techniques for **product recommendations, shelf arrangements, and promotions.** 🚀
+
+# Prac 10: **What is t-SNE?**  
+
+t-SNE (t-distributed Stochastic Neighbor Embedding) is a non-linear dimensionality reduction technique used for visualizing high-dimensional data in a lower-dimensional space (typically 2D or 3D). It is particularly useful for clustering and identifying patterns in large datasets.  
+
+#### **How t-SNE Works:**  
+1. **Computes pairwise similarities** between high-dimensional points using a probability distribution based on Gaussian distributions.  
+2. **Maps the points** into a lower-dimensional space using a Student's t-distribution to maintain similarities.  
+3. **Minimizes Kullback-Leibler (KL) divergence** between the high-dimensional and low-dimensional distributions.  
+4. **Optimizes placement of points** in 2D or 3D to best represent local similarities from high-dimensional space.  
+
+#### **Key Features:**  
+- Preserves local structure of data.  
+- Works well for clustering and pattern recognition.  
+- Can be computationally expensive for very large datasets.  
+
+---
+
+
