@@ -1,4 +1,4 @@
-# Prac 1: Data Augmentation: What, Why, and How  
+# Prac 1: Data Augmentation:
 
 ## 📌 What is Data Augmentation?  
 Data Augmentation is a technique used in machine learning and deep learning to artificially increase the size of a dataset by creating modified versions of existing data. This is especially useful in image processing, where transformations such as rotation, flipping, zooming, and brightness adjustments can be applied to generate more training samples.  
