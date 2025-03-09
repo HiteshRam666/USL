@@ -45,7 +45,7 @@ This approach **gradually expands the labeled dataset**, leading to **better mod
 
 ---
 
-## Prac 3: **Dimensionality Reduction & Feature Selection in Machine Learning**  
+# Prac 3: **Dimensionality Reduction & Feature Selection in Machine Learning**  
 
 ## **📌 Introduction**  
 Dimensionality reduction is a crucial technique in machine learning used to reduce the number of input variables (features) in a dataset while preserving important information. It helps in improving model performance, reducing computation time, and avoiding overfitting.
@@ -91,3 +91,67 @@ Feature extraction transforms high-dimensional data into a lower-dimensional spa
 - Helps in visualizing and improving model efficiency.  
 
 ---
+
+# Prac 4: Principal Component Analysis (PCA) from Scratch using NumPy  
+
+## 📌 What is PCA?  
+Principal Component Analysis (PCA) is a dimensionality reduction technique used in machine learning and statistics. It transforms high-dimensional data into a lower-dimensional form while preserving as much variance as possible.  
+
+### 🔹 Key Concepts:  
+- **Dimensionality Reduction**: Helps reduce the number of features while retaining essential patterns.  
+- **Feature Extraction**: Converts correlated features into uncorrelated principal components.  
+- **Variance Maximization**: The principal components capture the highest variance in the data.  
+
+---
+
+## ❓ Why PCA?  
+PCA is widely used for:  
+✔ **Reducing Computational Cost**: Lower dimensions mean faster processing.  
+✔ **Handling Multicollinearity**: Removes redundant features.  
+✔ **Visualization**: Helps in plotting high-dimensional data in 2D or 3D.  
+✔ **Noise Reduction**: Filters out irrelevant variations in data.  
+
+---
+
+## 📊 PCA Calculation Steps  
+### Step 1: Standardizing the Data  
+Subtract the mean from each feature to center the data around zero.  
+
+### Step 2: Compute the Covariance Matrix  
+Calculate the covariance between features to understand their relationships.  
+
+![image](https://github.com/user-attachments/assets/bdaea204-0c17-459a-926b-debd50a24034)
+
+### Step 3: Compute Eigenvalues and Eigenvectors  
+Eigenvalues indicate variance captured by each principal component, while eigenvectors define new feature axes.  
+
+![image](https://github.com/user-attachments/assets/c0a3ec2f-ffba-42a7-9720-f7422db52e1c)
+
+### Step 4: Sort Eigenvalues in Descending Order  
+Select the top **k** eigenvectors corresponding to the **k** largest eigenvalues.  
+
+### Step 5: Transform Data  
+Multiply the original data matrix by the selected eigenvectors to obtain the principal components.  
+
+### 📌 **Covariance Matrix, Eigenvalues, and Eigenvectors – Short Explanation**  
+
+#### **1️⃣ Covariance Matrix**  
+A **covariance matrix** is a square matrix that represents the relationships (covariances) between multiple features in a dataset. It helps measure how two features vary together.  
+
+- If **covariance is positive**, both features increase together.  
+- If **covariance is negative**, one increases while the other decreases.  
+- If **covariance is zero**, the features are independent.  
+
+#### **2️⃣ Eigenvalues and Eigenvectors**  
+Eigenvalues and eigenvectors help in transforming data into new principal components.  
+
+✅ **Eigenvector**: A direction in the feature space along which the data varies the most.  
+✅ **Eigenvalue**: The magnitude (amount of variance) along the corresponding eigenvector.  
+
+---
+
+🚀 **In short**:  
+- **Covariance Matrix**: Measures feature relationships.  
+- **Eigenvalues**: Show how much variance a principal component captures.  
+- **Eigenvectors**: Define the new directions (principal components) in transformed space.  
+
